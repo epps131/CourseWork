@@ -120,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainView";
             this.Text = "Обучающая программа";
+            this.Load += new System.EventHandler(this.MainView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,7 +16,13 @@ namespace CourseWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+
+            MainView view = new MainView();
+            MessageService service = new MessageService();
+
+            Presenter presenter = new Presenter(view, service);
+
+            Application.Run(view);
         }
     }
 }
